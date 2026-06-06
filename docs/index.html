@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linux Package Updates Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    :root {
+      --bg: #090b11;
+      --card-bg: rgba(18, 22, 33, 0.6);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --primary: #6366f1;
+      --primary-glow: rgba(99, 102, 241, 0.2);
+      --secondary: #a855f7;
+      --accent: #14b8a6;
+      --accent-red: #ef4444;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Outfit', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* Background decorative meshes */
+    .mesh-glow {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, rgba(99, 102, 241, 0) 70%);
+      top: -100px;
+      left: -100px;
+      z-index: -1;
+      filter: blur(80px);
+      pointer-events: none;
+    }
+
+    .mesh-glow-2 {
+      position: absolute;
+      width: 650px;
+      height: 650px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(168, 85, 247, 0.1) 0%, rgba(168, 85, 247, 0) 70%);
+      bottom: -100px;
+      right: -100px;
+      z-index: -1;
+      filter: blur(80px);
+      pointer-events: none;
+    }
+
+    header {
+      padding: 2.5rem 2rem;
+      border-bottom: 1px solid var(--card-border);
+      background: rgba(9, 11, 17, 0.8);
+      backdrop-filter: blur(16px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .logo h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -0.5px;
+    }
+
+    .logo span {
+      background: rgba(99, 102, 241, 0.15);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      color: #818cf8;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 0.25rem 0.6rem;
+      border-radius: 99px;
+      letter-spacing: 0.5px;
+    }
+
+    .last-updated {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .indicator {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--accent);
+      box-shadow: 0 0 10px var(--accent);
+      display: inline-block;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(0.9); opacity: 0.5; box-shadow: 0 0 0 0 rgba(20, 184, 166, 0.7); }
+      70% { transform: scale(1); opacity: 1; box-shadow: 0 0 0 10px rgba(20, 184, 166, 0); }
+      100% { transform: scale(0.9); opacity: 0.5; box-shadow: 0 0 0 0 rgba(20, 184, 166, 0); }
+    }
+
+    main {
+      max-width: 1400px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    .intro-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 2rem;
+      backdrop-filter: blur(12px);
+    }
+
+    .intro-card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .intro-card p {
+      color: var(--text-muted);
+      max-width: 800px;
+    }
+
+    /* Grid for quick statistics cards */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .stat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 1.5rem;
+      backdrop-filter: blur(12px);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(99, 102, 241, 0.3);
+      box-shadow: 0 10px 30px rgba(9, 11, 17, 0.5);
+    }
+
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--primary);
+    }
+
+    .stat-card.archlinux::before { background: #1793d1; }
+    .stat-card.opensuse-tumbleweed::before { background: #73ba25; }
+    .stat-card.opensuse-slowroll::before { background: #35b9ab; }
+    .stat-card.opensuse-leap::before { background: #5a7d2b; }
+    .stat-card.fedora::before { background: #3c6eb4; }
+    .stat-card.ubuntu::before { background: #e95420; }
+
+    .stat-card h3 {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+      margin-bottom: 0.8rem;
+    }
+
+    .stat-val {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.5px;
+    }
+
+    .stat-sub {
+      font-size: 0.85rem;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .stat-sub.neutral {
+      color: var(--text-muted);
+    }
+
+    /* Charts grid */
+    .charts-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    @media (max-width: 1024px) {
+      .charts-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .chart-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 1.8rem;
+      backdrop-filter: blur(12px);
+      display: flex;
+      flex-direction: column;
+      height: 450px;
+    }
+
+    .chart-card h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .chart-container {
+      position: relative;
+      flex-grow: 1;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Version matrix card */
+    .table-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 2rem;
+      backdrop-filter: blur(12px);
+    }
+
+    .table-card h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    th {
+      padding: 1rem 1.2rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--card-border);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    td {
+      padding: 1.2rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      font-size: 0.95rem;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .td-distro {
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .color-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .code-span {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      color: #c084fc;
+    }
+
+    /* Tabs for Changelog section */
+    .tab-section {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 2rem;
+      backdrop-filter: blur(12px);
+    }
+
+    .tab-section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .tab-section-header h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    .tab-buttons {
+      display: flex;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--card-border);
+      padding: 0.3rem;
+      border-radius: 12px;
+      overflow-x: auto;
+    }
+
+    .tab-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .tab-btn:hover {
+      color: var(--text);
+    }
+
+    .tab-btn.active {
+      background: var(--primary);
+      color: var(--text);
+      box-shadow: 0 4px 12px var(--primary-glow);
+    }
+
+    .changelog-content {
+      display: none;
+      animation: fadeIn 0.4s ease-out;
+    }
+
+    .changelog-content.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .changelog-columns {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 900px) {
+      .changelog-columns {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .changelog-col {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      border-radius: 12px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      height: 400px;
+    }
+
+    .changelog-col-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.04);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .changelog-col-title.updated { border-color: rgba(99, 102, 241, 0.3); color: #818cf8; }
+    .changelog-col-title.new { border-color: rgba(20, 184, 166, 0.3); color: #2dd4bf; }
+    .changelog-col-title.removed { border-color: rgba(239, 68, 68, 0.3); color: #f87171; }
+
+    .count-badge {
+      font-size: 0.75rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 99px;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text);
+    }
+    .updated .count-badge { background: rgba(99, 102, 241, 0.15); color: #818cf8; }
+    .new .count-badge { background: rgba(20, 184, 166, 0.15); color: #2dd4bf; }
+    .removed .count-badge { background: rgba(239, 68, 68, 0.15); color: #f87171; }
+
+    .pkg-list {
+      list-style: none;
+      overflow-y: auto;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      padding-right: 0.25rem;
+    }
+
+    .pkg-list::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    .pkg-list::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 99px;
+    }
+
+    .pkg-item {
+      padding: 0.8rem;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.02);
+      border-radius: 8px;
+      font-size: 0.85rem;
+    }
+
+    .pkg-name {
+      font-weight: 600;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--text);
+      word-break: break-all;
+    }
+
+    .pkg-ver-diff {
+      color: var(--text-muted);
+      margin-top: 0.3rem;
+      font-size: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+
+    .pkg-arrow {
+      color: var(--secondary);
+    }
+
+    .pkg-size {
+      float: right;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+
+    .empty-state {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .empty-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.8rem;
+      opacity: 0.5;
+    }
+
+    /* Error & Loading screens */
+    .loading-screen, .error-screen {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 50vh;
+      text-align: center;
+      padding: 3rem;
+    }
+
+    .spinner {
+      border: 3px solid rgba(255, 255, 255, 0.05);
+      border-top: 3px solid var(--primary);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin-bottom: 1rem;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    footer {
+      max-width: 1400px;
+      margin: 4rem auto 2rem;
+      padding: 0 2rem;
+      border-top: 1px solid var(--card-border);
+      padding-top: 2rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="mesh-glow"></div>
+  <div class="mesh-glow-2"></div>
+
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <h1>Linux Package Tracker</h1>
+        <span>Live Statistics</span>
+      </div>
+      <div class="last-updated" id="lastUpdated">
+        <span class="indicator"></span> Fetching latest data...
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent">
+    <div class="loading-screen">
+      <div class="spinner"></div>
+      <p>Loading summary data and initializing charts...</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>Linux Package Tracker &copy; 2026. Powered by GitHub Actions. Design custom tailored with pure CSS.</p>
+  </footer>
+
+  <script>
+    const DISTROS = {
+      'archlinux': { name: 'Arch Linux', color: '#1793d1' },
+      'opensuse-tumbleweed': { name: 'openSUSE Tumbleweed', color: '#73ba25' },
+      'opensuse-slowroll': { name: 'openSUSE Slowroll', color: '#35b9ab' },
+      'opensuse-leap': { name: 'openSUSE Leap 16.0', color: '#5a7d2b' },
+      'fedora': { name: 'Fedora', color: '#3c6eb4' },
+      'ubuntu': { name: 'Ubuntu', color: '#e95420' }
+    };
+
+    function formatBytes(bytes) {
+      if (!bytes || bytes === 0) return '0 B';
+      const k = 1024;
+      const sizes = ['B', 'KB', 'MB', 'GB', 'TB'];
+      const i = Math.floor(Math.log(bytes) / Math.log(k));
+      return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+    }
+
+    // Main initialization function
+    async function init() {
+      const mainEl = document.getElementById('mainContent');
+      const updatedEl = document.getElementById('lastUpdated');
+      
+      try {
+        const response = await fetch('./history_summary.json');
+        if (!response.ok) {
+          throw new Error('Summary data not found. Run the tracking script to populate history_summary.json.');
+        }
+        const data = await response.json();
+        renderDashboard(data, mainEl, updatedEl);
+      } catch (err) {
+        console.error(err);
+        mainEl.innerHTML = `
+          <div class="error-screen">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">⚠️</div>
+            <h2>Unable to load dashboard data</h2>
+            <p style="color: var(--text-muted); margin-top: 0.5rem; max-width: 500px; margin-inline: auto;">
+              ${err.message}
+            </p>
+            <div style="margin-top: 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; padding: 1rem; background: rgba(255,255,255,0.03); border: 1px solid var(--card-border); border-radius: 8px; text-align: left; max-width: 600px;">
+              # To generate dashboard data, run:<br>
+              python check_updates.py
+            </div>
+          </div>
+        `;
+      }
+    }
+
+    function renderDashboard(data, mainEl, updatedEl) {
+      const dates = Object.keys(data.history).sort();
+      if (dates.length === 0) {
+        mainEl.innerHTML = '<div class="error-screen"><h2>No history entries recorded yet.</h2></div>';
+        return;
+      }
+      
+      const latestDate = dates[dates.length - 1];
+      updatedEl.innerHTML = `<span class="indicator"></span> Last crawler run: <strong>${latestDate}</strong>`;
+
+      // Build stats HTML
+      let statsHtml = '';
+      const latestStats = data.history[latestDate];
+      
+      for (const distroId in DISTROS) {
+        const distInfo = DISTROS[distroId];
+        const distStat = latestStats[distroId] || { package_count: 0, updated: 0, new: 0, size_bytes: 0 };
+        
+        statsHtml += `
+          <div class="stat-card ${distroId}">
+            <h3>${distInfo.name}</h3>
+            <div class="stat-val">${distStat.package_count.toLocaleString()}</div>
+            <div class="stat-sub ${distStat.updated === 0 ? 'neutral' : ''}">
+              ${distStat.updated > 0 ? `<span>⬆️ ${distStat.updated} updates</span>` : '<span>Up to date</span>'}
+              ${distStat.size_bytes > 0 ? `<span style="opacity:0.7">(${formatBytes(distStat.size_bytes)})</span>` : ''}
+            </div>
+          </div>
+        `;
+      }
+
+      // Build Version Matrix Table HTML
+      let tableRows = '';
+      const latestVersions = data.versions[latestDate] || {};
+      
+      for (const distroId in DISTROS) {
+        const distInfo = DISTROS[distroId];
+        const vers = latestVersions[distroId] || {};
+        
+        tableRows += `
+          <tr>
+            <td>
+              <div class="td-distro">
+                <span class="color-dot" style="background-color: ${distInfo.color}"></span>
+                ${distInfo.name}
+              </div>
+            </td>
+            <td><span class="code-span">${vers.kernel || 'N/A'}</span></td>
+            <td><span class="code-span">${vers.gcc || 'N/A'}</span></td>
+            <td><span class="code-span">${vers.python3 || 'N/A'}</span></td>
+            <td><span class="code-span">${vers.glibc || 'N/A'}</span></td>
+            <td><span class="code-span">${vers.systemd || 'N/A'}</span></td>
+            <td><span class="code-span">${vers['gnome-shell'] || 'N/A'}</span></td>
+          </tr>
+        `;
+      }
+
+      // Build tabs and changelog HTML
+      let tabButtonsHtml = '';
+      let changelogContentsHtml = '';
+      let isFirst = true;
+      
+      for (const distroId in DISTROS) {
+        const distInfo = DISTROS[distroId];
+        const changelog = data.latest_changelog[distroId] || { updated: [], new: [], removed: [] };
+        const activeClass = isFirst ? 'active' : '';
+        
+        tabButtonsHtml += `
+          <button class="tab-btn ${activeClass}" onclick="switchTab(event, '${distroId}')">
+            ${distInfo.name}
+          </button>
+        `;
+        
+        // Build individual lists
+        let updatedItems = '';
+        if (changelog.updated.length > 0) {
+          changelog.updated.forEach(item => {
+            // item = [name, oldver, newver, size]
+            updatedItems += `
+              <li class="pkg-item">
+                <div class="pkg-size">${formatBytes(item[3])}</div>
+                <div class="pkg-name">${item[0]}</div>
+                <div class="pkg-ver-diff">
+                  <span>${item[1]}</span>
+                  <span class="pkg-arrow">➔</span>
+                  <span style="color:var(--text); font-weight:500;">${item[2]}</span>
+                </div>
+              </li>
+            `;
+          });
+        } else {
+          updatedItems = `<div class="empty-state"><div class="empty-icon">✓</div>No packages updated.</div>`;
+        }
+
+        let newItems = '';
+        if (changelog.new.length > 0) {
+          changelog.new.forEach(item => {
+            // item = [name, ver, size]
+            newItems += `
+              <li class="pkg-item">
+                <div class="pkg-size">${formatBytes(item[2])}</div>
+                <div class="pkg-name">${item[0]}</div>
+                <div class="pkg-ver-diff">version: ${item[1]}</div>
+              </li>
+            `;
+          });
+        } else {
+          newItems = `<div class="empty-state"><div class="empty-icon">📭</div>No new packages added.</div>`;
+        }
+
+        let removedItems = '';
+        if (changelog.removed.length > 0) {
+          changelog.removed.forEach(item => {
+            // item = [name, ver]
+            removedItems += `
+              <li class="pkg-item">
+                <div class="pkg-name">${item[0]}</div>
+                <div class="pkg-ver-diff">version: ${item[1]}</div>
+              </li>
+            `;
+          });
+        } else {
+          removedItems = `<div class="empty-state"><div class="empty-icon">✓</div>No packages removed.</div>`;
+        }
+        
+        changelogContentsHtml += `
+          <div class="changelog-content ${activeClass}" id="changelog-${distroId}">
+            <div class="changelog-columns">
+              <div class="changelog-col">
+                <div class="changelog-col-title updated">
+                  Updated Packages
+                  <span class="count-badge">${changelog.updated.length}</span>
+                </div>
+                <ul class="pkg-list">${updatedItems}</ul>
+              </div>
+              
+              <div class="changelog-col">
+                <div class="changelog-col-title new">
+                  New Additions
+                  <span class="count-badge">${changelog.new.length}</span>
+                </div>
+                <ul class="pkg-list">${newItems}</ul>
+              </div>
+              
+              <div class="changelog-col">
+                <div class="changelog-col-title removed">
+                  Removed Packages
+                  <span class="count-badge">${changelog.removed.length}</span>
+                </div>
+                <ul class="pkg-list">${removedItems}</ul>
+              </div>
+            </div>
+          </div>
+        `;
+        
+        isFirst = false;
+      }
+
+      // Assemble whole page
+      mainEl.innerHTML = `
+        <div class="intro-card">
+          <h2>Linux Repository Crawler Statistics</h2>
+          <p>
+            This page provides daily insights into the update velocity, packages size changes, and version progression of the most popular Linux distributions. Stats are crawled daily and compared with historical data.
+          </p>
+        </div>
+
+        <section class="stats-grid">
+          ${statsHtml}
+        </section>
+
+        <section class="charts-grid">
+          <div class="chart-card">
+            <h3>📈 Package Update Churn <span style="font-size:0.85rem; font-weight:normal; color:var(--text-muted)">Daily package upgrades</span></h3>
+            <div class="chart-container">
+              <canvas id="updatesChart"></canvas>
+            </div>
+          </div>
+          <div class="chart-card">
+            <h3>💾 Cumulative Update Size <span style="font-size:0.85rem; font-weight:normal; color:var(--text-muted)">Daily bandwidth volume in MB</span></h3>
+            <div class="chart-container">
+              <canvas id="sizesChart"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <section class="table-card">
+          <h3>🖥️ Key System Version Matrix</h3>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Distribution</th>
+                  <th>Linux Kernel</th>
+                  <th>GCC Compiler</th>
+                  <th>Python 3</th>
+                  <th>glibc</th>
+                  <th>Systemd</th>
+                  <th>GNOME Shell</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${tableRows}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="tab-section">
+          <div class="tab-section-header">
+            <h3>🔍 Detailed Run Changelog (Latest Run)</h3>
+            <div class="tab-buttons">
+              ${tabButtonsHtml}
+            </div>
+          </div>
+          <div id="changelogContents">
+            ${changelogContentsHtml}
+          </div>
+        </section>
+      `;
+
+      // Render Charts
+      renderCharts(data, dates);
+    }
+
+    function renderCharts(data, dates) {
+      // Prepare charts data
+      const datasetsUpdates = [];
+      const datasetsSizes = [];
+      
+      for (const distroId in DISTROS) {
+        const distInfo = DISTROS[distroId];
+        const updatePoints = [];
+        const sizePoints = []; // In MB
+        
+        dates.forEach(d => {
+          const stats = data.history[d][distroId];
+          if (stats) {
+            updatePoints.push(stats.updated || 0);
+            sizePoints.push(parseFloat(((stats.size_bytes || 0) / (1024 * 1024)).toFixed(2)));
+          } else {
+            updatePoints.push(0);
+            sizePoints.push(0);
+          }
+        });
+        
+        datasetsUpdates.push({
+          label: distInfo.name,
+          data: updatePoints,
+          borderColor: distInfo.color,
+          backgroundColor: distInfo.color + '15',
+          borderWidth: 2,
+          tension: 0.35,
+          pointRadius: 3,
+          pointHoverRadius: 6
+        });
+
+        datasetsSizes.push({
+          label: distInfo.name,
+          data: sizePoints,
+          backgroundColor: distInfo.color + 'a0',
+          borderColor: distInfo.color,
+          borderWidth: 1,
+          borderRadius: 4
+        });
+      }
+
+      // Render Line Chart (Updates)
+      new Chart(document.getElementById('updatesChart'), {
+        type: 'line',
+        data: {
+          labels: dates,
+          datasets: datasetsUpdates
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              position: 'top',
+              labels: { color: '#94a3b8', font: { family: 'Outfit', size: 12 } }
+            },
+            tooltip: {
+              mode: 'index',
+              intersect: false,
+              titleFont: { family: 'Outfit' },
+              bodyFont: { family: 'Outfit' }
+            }
+          },
+          scales: {
+            x: {
+              grid: { color: 'rgba(255, 255, 255, 0.03)' },
+              ticks: { color: '#64748b', font: { family: 'Outfit' } }
+            },
+            y: {
+              grid: { color: 'rgba(255, 255, 255, 0.03)' },
+              ticks: { color: '#64748b', font: { family: 'Outfit' } },
+              title: { display: true, text: 'Package Upgrades Count', color: '#64748b', font: { family: 'Outfit' } }
+            }
+          }
+        }
+      });
+
+      // Render Bar Chart (Sizes in MB)
+      new Chart(document.getElementById('sizesChart'), {
+        type: 'bar',
+        data: {
+          labels: dates,
+          datasets: datasetsSizes
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              position: 'top',
+              labels: { color: '#94a3b8', font: { family: 'Outfit', size: 12 } }
+            },
+            tooltip: {
+              mode: 'index',
+              intersect: false,
+              titleFont: { family: 'Outfit' },
+              bodyFont: { family: 'Outfit' },
+              callbacks: {
+                label: function(context) {
+                  return context.dataset.label + ': ' + context.raw.toLocaleString() + ' MB';
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              stacked: true,
+              grid: { color: 'rgba(255, 255, 255, 0.03)' },
+              ticks: { color: '#64748b', font: { family: 'Outfit' } }
+            },
+            y: {
+              stacked: true,
+              grid: { color: 'rgba(255, 255, 255, 0.03)' },
+              ticks: { color: '#64748b', font: { family: 'Outfit' } },
+              title: { display: true, text: 'Bandwidth (MB)', color: '#64748b', font: { family: 'Outfit' } }
+            }
+          }
+        }
+      });
+    }
+
+    // Tab switcher function
+    function switchTab(evt, distroId) {
+      // Hide all changelogs
+      const contents = document.querySelectorAll('.changelog-content');
+      contents.forEach(c => c.classList.remove('active'));
+      
+      // Deactivate all buttons
+      const buttons = document.querySelectorAll('.tab-btn');
+      buttons.forEach(b => b.classList.remove('active'));
+      
+      // Show target
+      document.getElementById(`changelog-${distroId}`).classList.add('active');
+      evt.currentTarget.classList.add('active');
+    }
+
+    // Initialize on load
+    window.addEventListener('load', init);
+  </script>
+</body>
+</html>

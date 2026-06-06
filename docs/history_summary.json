@@ -1,0 +1,1543 @@
+{
+  "history": {
+    "2026-05-23": {
+      "archlinux": {
+        "package_count": 15006,
+        "updated": 95,
+        "new": 2,
+        "removed": 0,
+        "size_bytes": 271266800
+      },
+      "opensuse-tumbleweed": {
+        "package_count": 40012,
+        "updated": 141,
+        "new": 4,
+        "removed": 3,
+        "size_bytes": 187451886
+      },
+      "opensuse-slowroll": {
+        "package_count": 38011,
+        "updated": 172,
+        "new": 7,
+        "removed": 4,
+        "size_bytes": 536055888
+      },
+      "opensuse-leap": {
+        "package_count": 36009,
+        "updated": 3,
+        "new": 0,
+        "removed": 1,
+        "size_bytes": 4866417
+      },
+      "fedora": {
+        "package_count": 68015,
+        "updated": 1,
+        "new": 2,
+        "removed": 0,
+        "size_bytes": 2555809
+      },
+      "ubuntu": {
+        "package_count": 75005,
+        "updated": 19,
+        "new": 1,
+        "removed": 0,
+        "size_bytes": 40512408
+      }
+    },
+    "2026-05-24": {
+      "archlinux": {
+        "package_count": 15008,
+        "updated": 86,
+        "new": 2,
+        "removed": 2,
+        "size_bytes": 159460082
+      },
+      "opensuse-tumbleweed": {
+        "package_count": 40021,
+        "updated": 103,
+        "new": 1,
+        "removed": 0,
+        "size_bytes": 325070678
+      },
+      "opensuse-slowroll": {
+        "package_count": 38014,
+        "updated": 0,
+        "new": 0,
+        "removed": 0,
+        "size_bytes": 0
+      },
+      "opensuse-leap": {
+        "package_count": 36007,
+        "updated": 0,
+        "new": 2,
+        "removed": 0,
+        "size_bytes": 0
+      },
+      "fedora": {
+        "package_count": 68010,
+        "updated": 19,
+        "new": 2,
+        "removed": 0,
+        "size_bytes": 20294888
+      },
+      "ubuntu": {
+        "package_count": 75012,
+        "updated": 16,
+        "new": 0,
+        "removed": 1,
+        "size_bytes": 18575488
+      }
+    },
+    "2026-05-25": {
+      "archlinux": {
+        "package_count": 15020,
+        "updated": 102,
+        "new": 4,
+        "removed": 2,
+        "size_bytes": 396876390
+      },
+      "opensuse-tumbleweed": {
+        "package_count": 40021,
+        "updated": 29,
+        "new": 1,
+        "removed": 5,
+        "size_bytes": 69860594
+      },
+      "opensuse-slowroll": {
+        "package_count": 38021,
+        "updated": 0,
+        "new": 0,
+        "removed": 0,
+        "size_bytes": 0
+      },
+      "opensuse-leap": {
+        "package_count": 36004,
+        "updated": 9,
+        "new": 2,
+        "removed": 1,
+        "size_bytes": 7200360
+      },
+      "fedora": {
+        "package_count": 68021,
+        "updated": 7,
+        "new": 1,
+        "removed": 0,
+        "size_bytes": 2387098
+      },
+      "ubuntu": {
+        "package_count": 75014,
+        "updated": 12,
+        "new": 1,
+        "removed": 1,
+        "size_bytes": 11716368
+      }
+    },
+    "2026-05-26": {
+      "archlinux": {
+        "package_count": 15030,
+        "updated": 98,
+        "new": 10,
+        "removed": 3,
+        "size_bytes": 238131082
+      },
+      "opensuse-tumbleweed": {
+        "package_count": 40024,
+        "updated": 24,
+        "new": 8,
+        "removed": 2,
+        "size_bytes": 42796944
+      },
+      "opensuse-slowroll": {
+        "package_count": 38023,
+        "updated": 0,
+        "new": 0,
+        "removed": 0,
+        "size_bytes": 0
+      },
+      "opensuse-leap": {
+        "package_count": 36015,
+        "updated": 5,
+        "new": 0,
+        "removed": 0,
+        "size_bytes": 17957110
+      },
+      "fedora": {
+        "package_count": 68022,
+        "updated": 7,
+        "new": 2,
+        "removed": 1,
+        "size_bytes": 21991074
+      },
+      "ubuntu": {
+        "package_count": 75015,
+        "updated": 5,
+        "new": 1,
+        "removed": 1,
+        "size_bytes": 9721205
+      }
+    },
+    "2026-05-27": {
+      "archlinux": {
+        "package_count": 15032,
+        "updated": 86,
+        "new": 5,
+        "removed": 1,
+        "size_bytes": 283603146
+      },
+      "opensuse-tumbleweed": {
+        "package_count": 40030,
+        "updated": 144,
+        "new": 9,
+        "removed": 5,
+        "size_bytes": 356562288
+      },
+      "opensuse-slowroll": {
+        "package_count": 38018,
+        "updated": 0,
+        "new": 0,
+        "removed": 0,
+        "size_bytes": 0
+      },
+      "opensuse-leap": {
+        "package_count": 36027,
+        "updated": 4,
+        "new": 1,
+        "removed": 1,
+        "size_bytes": 6567376
+      },
+      "fedora": {
+        "package_count": 68034,
+        "updated": 11,
+        "new": 1,
+        "removed": 1,
+        "size_bytes": 17276820
+      },
+      "ubuntu": {
+        "package_count": 75010,
+        "updated": 1,
+        "new": 1,
+        "removed": 0,
+        "size_bytes": 246010
+      }
+    },
+    "2026-05-28": {
+      "archlinux": {
+        "package_count": 15041,
+        "updated": 31,
+        "new": 9,
+        "removed": 4,
+        "size_bytes": 50020050
+      },
+      "opensuse-tumbleweed": {
+        "package_count": 40041,
+        "updated": 91,
+        "new": 3,
+        "removed": 4,
+        "size_bytes": 311545689
+      },
+      "opensuse-slowroll": {
+        "package_count": 38019,
+        "updated": 0,
+        "new": 0,
+        "removed": 0,
+        "size_bytes": 0
+      },
+      "opensuse-leap": {
+        "package_count": 36041,
+        "updated": 0,
+        "new": 0,
+        "removed": 1,
+        "size_bytes": 0
+      },
+      "fedora": {
+        "package_count": 68043,
+        "updated": 15,
+        "new": 2,
+        "removed": 0,
+        "size_bytes": 63713175
+      },
+      "ubuntu": {
+        "package_count": 75007,
+        "updated": 9,
+        "new": 1,
+        "removed": 0,
+        "size_bytes": 37060038
+      }
+    },
+    "2026-05-29": {
+      "archlinux": {
+        "package_count": 15043,
+        "updated": 92,
+        "new": 10,
+        "removed": 4,
+        "size_bytes": 183575144
+      },
+      "opensuse-tumbleweed": {
+        "package_count": 40041,
+        "updated": 57,
+        "new": 5,
+        "removed": 4,
+        "size_bytes": 50520069
+      },
+      "opensuse-slowroll": {
+        "package_count": 38021,
+        "updated": 0,
+        "new": 0,
+        "removed": 0,
+        "size_bytes": 0
+      },
+      "opensuse-leap": {
+        "package_count": 36042,
+        "updated": 15,
+        "new": 0,
+        "removed": 0,
+        "size_bytes": 31561065
+      },
+      "fedora": {
+        "package_count": 68046,
+        "updated": 20,
+        "new": 0,
+        "removed": 1,
+        "size_bytes": 89875800
+      },
+      "ubuntu": {
+        "package_count": 75005,
+        "updated": 0,
+        "new": 0,
+        "removed": 0,
+        "size_bytes": 0
+      }
+    },
+    "2026-05-30": {
+      "archlinux": {
+        "package_count": 15058,
+        "updated": 130,
+        "new": 2,
+        "removed": 0,
+        "size_bytes": 84901960
+      },
+      "opensuse-tumbleweed": {
+        "package_count": 40039,
+        "updated": 28,
+        "new": 2,
+        "removed": 1,
+        "size_bytes": 95819080
+      },
+      "opensuse-slowroll": {
+        "package_count": 38026,
+        "updated": 392,
+        "new": 12,
+        "removed": 1,
+        "size_bytes": 1504452096
+      },
+      "opensuse-leap": {
+        "package_count": 36037,
+        "updated": 19,
+        "new": 2,
+        "removed": 1,
+        "size_bytes": 21825851
+      },
+      "fedora": {
+        "package_count": 68060,
+        "updated": 9,
+        "new": 2,
+        "removed": 0,
+        "size_bytes": 26539200
+      },
+      "ubuntu": {
+        "package_count": 75008,
+        "updated": 18,
+        "new": 1,
+        "removed": 1,
+        "size_bytes": 38865996
+      }
+    },
+    "2026-05-31": {
+      "archlinux": {
+        "package_count": 15058,
+        "updated": 57,
+        "new": 10,
+        "removed": 1,
+        "size_bytes": 248200344
+      },
+      "opensuse-tumbleweed": {
+        "package_count": 40035,
+        "updated": 55,
+        "new": 2,
+        "removed": 1,
+        "size_bytes": 224951760
+      },
+      "opensuse-slowroll": {
+        "package_count": 38033,
+        "updated": 0,
+        "new": 0,
+        "removed": 0,
+        "size_bytes": 0
+      },
+      "opensuse-leap": {
+        "package_count": 36037,
+        "updated": 4,
+        "new": 2,
+        "removed": 1,
+        "size_bytes": 8757536
+      },
+      "fedora": {
+        "package_count": 68072,
+        "updated": 5,
+        "new": 1,
+        "removed": 1,
+        "size_bytes": 6684065
+      },
+      "ubuntu": {
+        "package_count": 75008,
+        "updated": 7,
+        "new": 0,
+        "removed": 1,
+        "size_bytes": 13324948
+      }
+    },
+    "2026-06-01": {
+      "archlinux": {
+        "package_count": 15056,
+        "updated": 81,
+        "new": 8,
+        "removed": 1,
+        "size_bytes": 13607676
+      },
+      "opensuse-tumbleweed": {
+        "package_count": 40049,
+        "updated": 128,
+        "new": 9,
+        "removed": 1,
+        "size_bytes": 80390144
+      },
+      "opensuse-slowroll": {
+        "package_count": 38030,
+        "updated": 0,
+        "new": 0,
+        "removed": 0,
+        "size_bytes": 0
+      },
+      "opensuse-leap": {
+        "package_count": 36037,
+        "updated": 8,
+        "new": 0,
+        "removed": 0,
+        "size_bytes": 24879616
+      },
+      "fedora": {
+        "package_count": 68084,
+        "updated": 16,
+        "new": 0,
+        "removed": 0,
+        "size_bytes": 17217248
+      },
+      "ubuntu": {
+        "package_count": 75009,
+        "updated": 6,
+        "new": 2,
+        "removed": 1,
+        "size_bytes": 5945376
+      }
+    },
+    "2026-06-02": {
+      "archlinux": {
+        "package_count": 15062,
+        "updated": 140,
+        "new": 6,
+        "removed": 4,
+        "size_bytes": 18451720
+      },
+      "opensuse-tumbleweed": {
+        "package_count": 40046,
+        "updated": 117,
+        "new": 3,
+        "removed": 5,
+        "size_bytes": 48365928
+      },
+      "opensuse-slowroll": {
+        "package_count": 38039,
+        "updated": 0,
+        "new": 0,
+        "removed": 0,
+        "size_bytes": 0
+      },
+      "opensuse-leap": {
+        "package_count": 36042,
+        "updated": 17,
+        "new": 1,
+        "removed": 0,
+        "size_bytes": 73724308
+      },
+      "fedora": {
+        "package_count": 68083,
+        "updated": 20,
+        "new": 0,
+        "removed": 1,
+        "size_bytes": 22019540
+      },
+      "ubuntu": {
+        "package_count": 75018,
+        "updated": 2,
+        "new": 0,
+        "removed": 1,
+        "size_bytes": 7298370
+      }
+    },
+    "2026-06-03": {
+      "archlinux": {
+        "package_count": 15067,
+        "updated": 145,
+        "new": 7,
+        "removed": 2,
+        "size_bytes": 79097790
+      },
+      "opensuse-tumbleweed": {
+        "package_count": 40049,
+        "updated": 129,
+        "new": 7,
+        "removed": 5,
+        "size_bytes": 411895968
+      },
+      "opensuse-slowroll": {
+        "package_count": 38048,
+        "updated": 0,
+        "new": 0,
+        "removed": 0,
+        "size_bytes": 0
+      },
+      "opensuse-leap": {
+        "package_count": 36037,
+        "updated": 18,
+        "new": 0,
+        "removed": 1,
+        "size_bytes": 25260840
+      },
+      "fedora": {
+        "package_count": 68085,
+        "updated": 6,
+        "new": 0,
+        "removed": 1,
+        "size_bytes": 26657058
+      },
+      "ubuntu": {
+        "package_count": 75033,
+        "updated": 8,
+        "new": 2,
+        "removed": 0,
+        "size_bytes": 23417520
+      }
+    },
+    "2026-06-04": {
+      "archlinux": {
+        "package_count": 15081,
+        "updated": 146,
+        "new": 6,
+        "removed": 3,
+        "size_bytes": 371705342
+      },
+      "opensuse-tumbleweed": {
+        "package_count": 40061,
+        "updated": 30,
+        "new": 6,
+        "removed": 0,
+        "size_bytes": 41796480
+      },
+      "opensuse-slowroll": {
+        "package_count": 38044,
+        "updated": 0,
+        "new": 0,
+        "removed": 0,
+        "size_bytes": 0
+      },
+      "opensuse-leap": {
+        "package_count": 36042,
+        "updated": 4,
+        "new": 2,
+        "removed": 1,
+        "size_bytes": 779348
+      },
+      "fedora": {
+        "package_count": 68087,
+        "updated": 6,
+        "new": 2,
+        "removed": 1,
+        "size_bytes": 8070780
+      },
+      "ubuntu": {
+        "package_count": 75029,
+        "updated": 9,
+        "new": 2,
+        "removed": 0,
+        "size_bytes": 9348885
+      }
+    },
+    "2026-06-05": {
+      "archlinux": {
+        "package_count": 15093,
+        "updated": 56,
+        "new": 2,
+        "removed": 3,
+        "size_bytes": 134155000
+      },
+      "opensuse-tumbleweed": {
+        "package_count": 40075,
+        "updated": 28,
+        "new": 5,
+        "removed": 2,
+        "size_bytes": 26880896
+      },
+      "opensuse-slowroll": {
+        "package_count": 38039,
+        "updated": 0,
+        "new": 0,
+        "removed": 0,
+        "size_bytes": 0
+      },
+      "opensuse-leap": {
+        "package_count": 36054,
+        "updated": 0,
+        "new": 1,
+        "removed": 1,
+        "size_bytes": 0
+      },
+      "fedora": {
+        "package_count": 68082,
+        "updated": 0,
+        "new": 0,
+        "removed": 0,
+        "size_bytes": 0
+      },
+      "ubuntu": {
+        "package_count": 75039,
+        "updated": 13,
+        "new": 0,
+        "removed": 1,
+        "size_bytes": 23561941
+      }
+    },
+    "2026-06-06": {
+      "opensuse-leap": {
+        "package_count": 36725,
+        "updated": 0,
+        "new": 0,
+        "removed": 0,
+        "size_bytes": 0
+      }
+    }
+  },
+  "versions": {
+    "2026-05-23": {
+      "archlinux": {
+        "kernel": "7.0.11.arch1-1",
+        "systemd": "260.2-2",
+        "python3": "3.14.5-1",
+        "gcc": "16.1.1",
+        "glibc": "2.43",
+        "gnome-shell": "50.2-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-tumbleweed": {
+        "kernel": "7.0.10-default",
+        "systemd": "260.1-1",
+        "python3": "3.14.4",
+        "gcc": "16.1.0",
+        "glibc": "2.43",
+        "gnome-shell": "50.1-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-slowroll": {
+        "kernel": "7.0.5-default",
+        "systemd": "256.3-1",
+        "python3": "3.12.3",
+        "gcc": "15.2.0",
+        "glibc": "2.41",
+        "gnome-shell": "48.2-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-leap": {
+        "kernel": "6.12.18-default",
+        "systemd": "254.12-1",
+        "python3": "3.11.9",
+        "gcc": "14.2.0",
+        "glibc": "2.39",
+        "gnome-shell": "46.4-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "fedora": {
+        "kernel": "7.0.9-200.fc44",
+        "systemd": "260.0-3",
+        "python3": "3.14.2",
+        "gcc": "16.0.1",
+        "glibc": "2.43",
+        "gnome-shell": "50.0-2",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "ubuntu": {
+        "kernel": "6.15.0-30-generic",
+        "systemd": "256.4-2ubuntu3",
+        "python3": "3.12.3",
+        "gcc": "15.1.0",
+        "glibc": "2.41",
+        "gnome-shell": "48.0-1ubuntu1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      }
+    },
+    "2026-05-24": {
+      "archlinux": {
+        "kernel": "7.0.11.arch1-1",
+        "systemd": "260.2-2",
+        "python3": "3.14.5-1",
+        "gcc": "16.1.1",
+        "glibc": "2.43",
+        "gnome-shell": "50.2-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-tumbleweed": {
+        "kernel": "7.0.10-default",
+        "systemd": "260.1-1",
+        "python3": "3.14.4",
+        "gcc": "16.1.0",
+        "glibc": "2.43",
+        "gnome-shell": "50.1-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-slowroll": {
+        "kernel": "7.0.5-default",
+        "systemd": "256.3-1",
+        "python3": "3.12.3",
+        "gcc": "15.2.0",
+        "glibc": "2.41",
+        "gnome-shell": "48.2-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-leap": {
+        "kernel": "6.12.18-default",
+        "systemd": "254.12-1",
+        "python3": "3.11.9",
+        "gcc": "14.2.0",
+        "glibc": "2.39",
+        "gnome-shell": "46.4-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "fedora": {
+        "kernel": "7.0.9-200.fc44",
+        "systemd": "260.0-3",
+        "python3": "3.14.2",
+        "gcc": "16.0.1",
+        "glibc": "2.43",
+        "gnome-shell": "50.0-2",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "ubuntu": {
+        "kernel": "6.15.0-30-generic",
+        "systemd": "256.4-2ubuntu3",
+        "python3": "3.12.3",
+        "gcc": "15.1.0",
+        "glibc": "2.41",
+        "gnome-shell": "48.0-1ubuntu1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      }
+    },
+    "2026-05-25": {
+      "archlinux": {
+        "kernel": "7.0.11.arch1-1",
+        "systemd": "260.2-2",
+        "python3": "3.14.5-1",
+        "gcc": "16.1.1",
+        "glibc": "2.43",
+        "gnome-shell": "50.2-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-tumbleweed": {
+        "kernel": "7.0.10-default",
+        "systemd": "260.1-1",
+        "python3": "3.14.4",
+        "gcc": "16.1.0",
+        "glibc": "2.43",
+        "gnome-shell": "50.1-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-slowroll": {
+        "kernel": "7.0.5-default",
+        "systemd": "256.3-1",
+        "python3": "3.12.3",
+        "gcc": "15.2.0",
+        "glibc": "2.41",
+        "gnome-shell": "48.2-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-leap": {
+        "kernel": "6.12.18-default",
+        "systemd": "254.12-1",
+        "python3": "3.11.9",
+        "gcc": "14.2.0",
+        "glibc": "2.39",
+        "gnome-shell": "46.4-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "fedora": {
+        "kernel": "7.0.9-200.fc44",
+        "systemd": "260.0-3",
+        "python3": "3.14.2",
+        "gcc": "16.0.1",
+        "glibc": "2.43",
+        "gnome-shell": "50.0-2",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "ubuntu": {
+        "kernel": "6.15.0-30-generic",
+        "systemd": "256.4-2ubuntu3",
+        "python3": "3.12.3",
+        "gcc": "15.1.0",
+        "glibc": "2.41",
+        "gnome-shell": "48.0-1ubuntu1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      }
+    },
+    "2026-05-26": {
+      "archlinux": {
+        "kernel": "7.0.11.arch1-1",
+        "systemd": "260.2-2",
+        "python3": "3.14.5-1",
+        "gcc": "16.1.1",
+        "glibc": "2.43",
+        "gnome-shell": "50.2-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-tumbleweed": {
+        "kernel": "7.0.10-default",
+        "systemd": "260.1-1",
+        "python3": "3.14.4",
+        "gcc": "16.1.0",
+        "glibc": "2.43",
+        "gnome-shell": "50.1-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-slowroll": {
+        "kernel": "7.0.5-default",
+        "systemd": "256.3-1",
+        "python3": "3.12.3",
+        "gcc": "15.2.0",
+        "glibc": "2.41",
+        "gnome-shell": "48.2-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-leap": {
+        "kernel": "6.12.18-default",
+        "systemd": "254.12-1",
+        "python3": "3.11.9",
+        "gcc": "14.2.0",
+        "glibc": "2.39",
+        "gnome-shell": "46.4-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "fedora": {
+        "kernel": "7.0.9-200.fc44",
+        "systemd": "260.0-3",
+        "python3": "3.14.2",
+        "gcc": "16.0.1",
+        "glibc": "2.43",
+        "gnome-shell": "50.0-2",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "ubuntu": {
+        "kernel": "6.15.0-30-generic",
+        "systemd": "256.4-2ubuntu3",
+        "python3": "3.12.3",
+        "gcc": "15.1.0",
+        "glibc": "2.41",
+        "gnome-shell": "48.0-1ubuntu1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      }
+    },
+    "2026-05-27": {
+      "archlinux": {
+        "kernel": "7.0.11.arch1-1",
+        "systemd": "260.2-2",
+        "python3": "3.14.5-1",
+        "gcc": "16.1.1",
+        "glibc": "2.43",
+        "gnome-shell": "50.2-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-tumbleweed": {
+        "kernel": "7.0.10-default",
+        "systemd": "260.1-1",
+        "python3": "3.14.4",
+        "gcc": "16.1.0",
+        "glibc": "2.43",
+        "gnome-shell": "50.1-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-slowroll": {
+        "kernel": "7.0.5-default",
+        "systemd": "256.3-1",
+        "python3": "3.12.3",
+        "gcc": "15.2.0",
+        "glibc": "2.41",
+        "gnome-shell": "48.2-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-leap": {
+        "kernel": "6.12.18-default",
+        "systemd": "254.12-1",
+        "python3": "3.11.9",
+        "gcc": "14.2.0",
+        "glibc": "2.39",
+        "gnome-shell": "46.4-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "fedora": {
+        "kernel": "7.0.9-200.fc44",
+        "systemd": "260.0-3",
+        "python3": "3.14.2",
+        "gcc": "16.0.1",
+        "glibc": "2.43",
+        "gnome-shell": "50.0-2",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "ubuntu": {
+        "kernel": "6.15.0-30-generic",
+        "systemd": "256.4-2ubuntu3",
+        "python3": "3.12.3",
+        "gcc": "15.1.0",
+        "glibc": "2.41",
+        "gnome-shell": "48.0-1ubuntu1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      }
+    },
+    "2026-05-28": {
+      "archlinux": {
+        "kernel": "7.0.11.arch1-1",
+        "systemd": "260.2-2",
+        "python3": "3.14.5-1",
+        "gcc": "16.1.1",
+        "glibc": "2.43",
+        "gnome-shell": "50.2-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-tumbleweed": {
+        "kernel": "7.0.10-default",
+        "systemd": "260.1-1",
+        "python3": "3.14.4",
+        "gcc": "16.1.0",
+        "glibc": "2.43",
+        "gnome-shell": "50.1-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-slowroll": {
+        "kernel": "7.0.5-default",
+        "systemd": "256.3-1",
+        "python3": "3.12.3",
+        "gcc": "15.2.0",
+        "glibc": "2.41",
+        "gnome-shell": "48.2-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-leap": {
+        "kernel": "6.12.18-default",
+        "systemd": "254.12-1",
+        "python3": "3.11.9",
+        "gcc": "14.2.0",
+        "glibc": "2.39",
+        "gnome-shell": "46.4-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "fedora": {
+        "kernel": "7.0.9-200.fc44",
+        "systemd": "260.0-3",
+        "python3": "3.14.2",
+        "gcc": "16.0.1",
+        "glibc": "2.43",
+        "gnome-shell": "50.0-2",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "ubuntu": {
+        "kernel": "6.15.0-30-generic",
+        "systemd": "256.4-2ubuntu3",
+        "python3": "3.12.3",
+        "gcc": "15.1.0",
+        "glibc": "2.41",
+        "gnome-shell": "48.0-1ubuntu1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      }
+    },
+    "2026-05-29": {
+      "archlinux": {
+        "kernel": "7.0.11.arch1-1",
+        "systemd": "260.2-2",
+        "python3": "3.14.5-1",
+        "gcc": "16.1.1",
+        "glibc": "2.43",
+        "gnome-shell": "50.2-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-tumbleweed": {
+        "kernel": "7.0.10-default",
+        "systemd": "260.1-1",
+        "python3": "3.14.4",
+        "gcc": "16.1.0",
+        "glibc": "2.43",
+        "gnome-shell": "50.1-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-slowroll": {
+        "kernel": "7.0.5-default",
+        "systemd": "256.3-1",
+        "python3": "3.12.3",
+        "gcc": "15.2.0",
+        "glibc": "2.41",
+        "gnome-shell": "48.2-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-leap": {
+        "kernel": "6.12.18-default",
+        "systemd": "254.12-1",
+        "python3": "3.11.9",
+        "gcc": "14.2.0",
+        "glibc": "2.39",
+        "gnome-shell": "46.4-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "fedora": {
+        "kernel": "7.0.9-200.fc44",
+        "systemd": "260.0-3",
+        "python3": "3.14.2",
+        "gcc": "16.0.1",
+        "glibc": "2.43",
+        "gnome-shell": "50.0-2",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "ubuntu": {
+        "kernel": "6.15.0-30-generic",
+        "systemd": "256.4-2ubuntu3",
+        "python3": "3.12.3",
+        "gcc": "15.1.0",
+        "glibc": "2.41",
+        "gnome-shell": "48.0-1ubuntu1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      }
+    },
+    "2026-05-30": {
+      "archlinux": {
+        "kernel": "7.0.11.arch1-1",
+        "systemd": "260.2-2",
+        "python3": "3.14.5-1",
+        "gcc": "16.1.1",
+        "glibc": "2.43",
+        "gnome-shell": "50.2-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-tumbleweed": {
+        "kernel": "7.0.10-default",
+        "systemd": "260.1-1",
+        "python3": "3.14.4",
+        "gcc": "16.1.0",
+        "glibc": "2.43",
+        "gnome-shell": "50.1-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-slowroll": {
+        "kernel": "7.0.5-default",
+        "systemd": "256.3-1",
+        "python3": "3.12.3",
+        "gcc": "15.2.0",
+        "glibc": "2.41",
+        "gnome-shell": "48.2-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-leap": {
+        "kernel": "6.12.18-default",
+        "systemd": "254.12-1",
+        "python3": "3.11.9",
+        "gcc": "14.2.0",
+        "glibc": "2.39",
+        "gnome-shell": "46.4-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "fedora": {
+        "kernel": "7.0.9-200.fc44",
+        "systemd": "260.0-3",
+        "python3": "3.14.2",
+        "gcc": "16.0.1",
+        "glibc": "2.43",
+        "gnome-shell": "50.0-2",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "ubuntu": {
+        "kernel": "6.15.0-30-generic",
+        "systemd": "256.4-2ubuntu3",
+        "python3": "3.12.3",
+        "gcc": "15.1.0",
+        "glibc": "2.41",
+        "gnome-shell": "48.0-1ubuntu1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      }
+    },
+    "2026-05-31": {
+      "archlinux": {
+        "kernel": "7.0.11.arch1-1",
+        "systemd": "260.2-2",
+        "python3": "3.14.5-1",
+        "gcc": "16.1.1",
+        "glibc": "2.43",
+        "gnome-shell": "50.2-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-tumbleweed": {
+        "kernel": "7.0.10-default",
+        "systemd": "260.1-1",
+        "python3": "3.14.4",
+        "gcc": "16.1.0",
+        "glibc": "2.43",
+        "gnome-shell": "50.1-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-slowroll": {
+        "kernel": "7.0.5-default",
+        "systemd": "256.3-1",
+        "python3": "3.12.3",
+        "gcc": "15.2.0",
+        "glibc": "2.41",
+        "gnome-shell": "48.2-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-leap": {
+        "kernel": "6.12.18-default",
+        "systemd": "254.12-1",
+        "python3": "3.11.9",
+        "gcc": "14.2.0",
+        "glibc": "2.39",
+        "gnome-shell": "46.4-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "fedora": {
+        "kernel": "7.0.9-200.fc44",
+        "systemd": "260.0-3",
+        "python3": "3.14.2",
+        "gcc": "16.0.1",
+        "glibc": "2.43",
+        "gnome-shell": "50.0-2",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "ubuntu": {
+        "kernel": "6.15.0-30-generic",
+        "systemd": "256.4-2ubuntu3",
+        "python3": "3.12.3",
+        "gcc": "15.1.0",
+        "glibc": "2.41",
+        "gnome-shell": "48.0-1ubuntu1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      }
+    },
+    "2026-06-01": {
+      "archlinux": {
+        "kernel": "7.0.11.arch1-1",
+        "systemd": "260.2-2",
+        "python3": "3.14.5-1",
+        "gcc": "16.1.1",
+        "glibc": "2.43",
+        "gnome-shell": "50.2-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-tumbleweed": {
+        "kernel": "7.0.10-default",
+        "systemd": "260.1-1",
+        "python3": "3.14.4",
+        "gcc": "16.1.0",
+        "glibc": "2.43",
+        "gnome-shell": "50.1-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-slowroll": {
+        "kernel": "7.0.5-default",
+        "systemd": "256.3-1",
+        "python3": "3.12.3",
+        "gcc": "15.2.0",
+        "glibc": "2.41",
+        "gnome-shell": "48.2-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-leap": {
+        "kernel": "6.12.18-default",
+        "systemd": "254.12-1",
+        "python3": "3.11.9",
+        "gcc": "14.2.0",
+        "glibc": "2.39",
+        "gnome-shell": "46.4-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "fedora": {
+        "kernel": "7.0.9-200.fc44",
+        "systemd": "260.0-3",
+        "python3": "3.14.2",
+        "gcc": "16.0.1",
+        "glibc": "2.43",
+        "gnome-shell": "50.0-2",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "ubuntu": {
+        "kernel": "6.15.0-30-generic",
+        "systemd": "256.4-2ubuntu3",
+        "python3": "3.12.3",
+        "gcc": "15.1.0",
+        "glibc": "2.41",
+        "gnome-shell": "48.0-1ubuntu1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      }
+    },
+    "2026-06-02": {
+      "archlinux": {
+        "kernel": "7.0.11.arch1-1",
+        "systemd": "260.2-2",
+        "python3": "3.14.5-1",
+        "gcc": "16.1.1",
+        "glibc": "2.43",
+        "gnome-shell": "50.2-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-tumbleweed": {
+        "kernel": "7.0.10-default",
+        "systemd": "260.1-1",
+        "python3": "3.14.4",
+        "gcc": "16.1.0",
+        "glibc": "2.43",
+        "gnome-shell": "50.1-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-slowroll": {
+        "kernel": "7.0.5-default",
+        "systemd": "256.3-1",
+        "python3": "3.12.3",
+        "gcc": "15.2.0",
+        "glibc": "2.41",
+        "gnome-shell": "48.2-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-leap": {
+        "kernel": "6.12.18-default",
+        "systemd": "254.12-1",
+        "python3": "3.11.9",
+        "gcc": "14.2.0",
+        "glibc": "2.39",
+        "gnome-shell": "46.4-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "fedora": {
+        "kernel": "7.0.9-200.fc44",
+        "systemd": "260.0-3",
+        "python3": "3.14.2",
+        "gcc": "16.0.1",
+        "glibc": "2.43",
+        "gnome-shell": "50.0-2",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "ubuntu": {
+        "kernel": "6.15.0-30-generic",
+        "systemd": "256.4-2ubuntu3",
+        "python3": "3.12.3",
+        "gcc": "15.1.0",
+        "glibc": "2.41",
+        "gnome-shell": "48.0-1ubuntu1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      }
+    },
+    "2026-06-03": {
+      "archlinux": {
+        "kernel": "7.0.11.arch1-1",
+        "systemd": "260.2-2",
+        "python3": "3.14.5-1",
+        "gcc": "16.1.1",
+        "glibc": "2.43",
+        "gnome-shell": "50.2-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-tumbleweed": {
+        "kernel": "7.0.10-default",
+        "systemd": "260.1-1",
+        "python3": "3.14.4",
+        "gcc": "16.1.0",
+        "glibc": "2.43",
+        "gnome-shell": "50.1-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-slowroll": {
+        "kernel": "7.0.5-default",
+        "systemd": "256.3-1",
+        "python3": "3.12.3",
+        "gcc": "15.2.0",
+        "glibc": "2.41",
+        "gnome-shell": "48.2-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-leap": {
+        "kernel": "6.12.18-default",
+        "systemd": "254.12-1",
+        "python3": "3.11.9",
+        "gcc": "14.2.0",
+        "glibc": "2.39",
+        "gnome-shell": "46.4-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "fedora": {
+        "kernel": "7.0.9-200.fc44",
+        "systemd": "260.0-3",
+        "python3": "3.14.2",
+        "gcc": "16.0.1",
+        "glibc": "2.43",
+        "gnome-shell": "50.0-2",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "ubuntu": {
+        "kernel": "6.15.0-30-generic",
+        "systemd": "256.4-2ubuntu3",
+        "python3": "3.12.3",
+        "gcc": "15.1.0",
+        "glibc": "2.41",
+        "gnome-shell": "48.0-1ubuntu1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      }
+    },
+    "2026-06-04": {
+      "archlinux": {
+        "kernel": "7.0.11.arch1-1",
+        "systemd": "260.2-2",
+        "python3": "3.14.5-1",
+        "gcc": "16.1.1",
+        "glibc": "2.43",
+        "gnome-shell": "50.2-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-tumbleweed": {
+        "kernel": "7.0.10-default",
+        "systemd": "260.1-1",
+        "python3": "3.14.4",
+        "gcc": "16.1.0",
+        "glibc": "2.43",
+        "gnome-shell": "50.1-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-slowroll": {
+        "kernel": "7.0.5-default",
+        "systemd": "256.3-1",
+        "python3": "3.12.3",
+        "gcc": "15.2.0",
+        "glibc": "2.41",
+        "gnome-shell": "48.2-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-leap": {
+        "kernel": "6.12.18-default",
+        "systemd": "254.12-1",
+        "python3": "3.11.9",
+        "gcc": "14.2.0",
+        "glibc": "2.39",
+        "gnome-shell": "46.4-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "fedora": {
+        "kernel": "7.0.9-200.fc44",
+        "systemd": "260.0-3",
+        "python3": "3.14.2",
+        "gcc": "16.0.1",
+        "glibc": "2.43",
+        "gnome-shell": "50.0-2",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "ubuntu": {
+        "kernel": "6.15.0-30-generic",
+        "systemd": "256.4-2ubuntu3",
+        "python3": "3.12.3",
+        "gcc": "15.1.0",
+        "glibc": "2.41",
+        "gnome-shell": "48.0-1ubuntu1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      }
+    },
+    "2026-06-05": {
+      "archlinux": {
+        "kernel": "7.0.11.arch1-1",
+        "systemd": "260.2-2",
+        "python3": "3.14.5-1",
+        "gcc": "16.1.1",
+        "glibc": "2.43",
+        "gnome-shell": "50.2-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-tumbleweed": {
+        "kernel": "7.0.10-default",
+        "systemd": "260.1-1",
+        "python3": "3.14.4",
+        "gcc": "16.1.0",
+        "glibc": "2.43",
+        "gnome-shell": "50.1-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-slowroll": {
+        "kernel": "7.0.5-default",
+        "systemd": "256.3-1",
+        "python3": "3.12.3",
+        "gcc": "15.2.0",
+        "glibc": "2.41",
+        "gnome-shell": "48.2-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "opensuse-leap": {
+        "kernel": "6.12.18-default",
+        "systemd": "254.12-1",
+        "python3": "3.11.9",
+        "gcc": "14.2.0",
+        "glibc": "2.39",
+        "gnome-shell": "46.4-1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "fedora": {
+        "kernel": "7.0.9-200.fc44",
+        "systemd": "260.0-3",
+        "python3": "3.14.2",
+        "gcc": "16.0.1",
+        "glibc": "2.43",
+        "gnome-shell": "50.0-2",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      },
+      "ubuntu": {
+        "kernel": "6.15.0-30-generic",
+        "systemd": "256.4-2ubuntu3",
+        "python3": "3.12.3",
+        "gcc": "15.1.0",
+        "glibc": "2.41",
+        "gnome-shell": "48.0-1ubuntu1",
+        "wayland": "1.25.0",
+        "bash": "5.3"
+      }
+    },
+    "2026-06-06": {
+      "opensuse-leap": {
+        "kernel": "6.12.0-160000.9.1",
+        "systemd": "257.7-160000.2.2",
+        "python3": "3.13.5-160000.2.2",
+        "gcc": "15-160000.2.2",
+        "glibc": "2.40-160000.5.1",
+        "gnome-shell": "48.4-160000.1.1",
+        "wayland": "N/A",
+        "bash": "5.2.37-160000.2.2"
+      }
+    }
+  },
+  "latest_changelog": {
+    "archlinux": {
+      "updated": [],
+      "new": [],
+      "removed": []
+    },
+    "opensuse-tumbleweed": {
+      "updated": [],
+      "new": [],
+      "removed": []
+    },
+    "opensuse-slowroll": {
+      "updated": [],
+      "new": [],
+      "removed": []
+    },
+    "opensuse-leap": {
+      "updated": [],
+      "new": [],
+      "removed": []
+    },
+    "fedora": {
+      "updated": [],
+      "new": [],
+      "removed": []
+    },
+    "ubuntu": {
+      "updated": [],
+      "new": [],
+      "removed": []
+    }
+  }
+}
