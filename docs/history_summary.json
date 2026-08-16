@@ -1432,6 +1432,50 @@
         "removed": 0,
         "size_bytes": 0
       }
+    },
+    "2026-08-16": {
+      "opensuse-slowroll": {
+        "package_count": 52428,
+        "updated": 0,
+        "new": 0,
+        "removed": 0,
+        "size_bytes": 0
+      },
+      "opensuse-tumbleweed": {
+        "package_count": 52481,
+        "updated": 0,
+        "new": 0,
+        "removed": 0,
+        "size_bytes": 0
+      },
+      "fedora": {
+        "package_count": 68977,
+        "updated": 0,
+        "new": 0,
+        "removed": 0,
+        "size_bytes": 0
+      },
+      "opensuse-leap": {
+        "package_count": 36897,
+        "updated": 0,
+        "new": 0,
+        "removed": 0,
+        "size_bytes": 0
+      },
+      "archlinux": {
+        "package_count": 15203,
+        "updated": 0,
+        "new": 0,
+        "removed": 0,
+        "size_bytes": 0
+      },
+      "ubuntu": {
+        "package_count": 77220,
+        "updated": 0,
+        "new": 0,
+        "removed": 0,
+        "size_bytes": 0
+      }
     }
   },
   "versions": {
@@ -3445,6 +3489,68 @@
       "ubuntu": {
         "kernel": "7.0.0-29.29",
         "systemd": "259.5-0ubuntu3.3",
+        "python3": "3.14.3-0ubuntu2",
+        "gcc": "4:15.2.0-5ubuntu1",
+        "glibc": "2.43-2ubuntu2.3",
+        "gnome-shell": "50.1-0ubuntu1.2",
+        "wayland": "N/A",
+        "bash": "5.3-2ubuntu1"
+      }
+    },
+    "2026-08-16": {
+      "opensuse-slowroll": {
+        "kernel": "7.1.5-1.1",
+        "systemd": "261.2-1.1",
+        "python3": "3.15.0~b4-1.1",
+        "gcc": "16-1.1",
+        "glibc": "2.43-4.3",
+        "gnome-shell": "50.3-1.2",
+        "wayland": "N/A",
+        "bash": "5.3.15-8.2"
+      },
+      "opensuse-tumbleweed": {
+        "kernel": "7.1.8-1.1",
+        "systemd": "261.2-1.1",
+        "python3": "3.15.0~b4-1.1",
+        "gcc": "16-1.1",
+        "glibc": "2.43-4.3",
+        "gnome-shell": "50.4-1.1",
+        "wayland": "N/A",
+        "bash": "5.3.15-8.2"
+      },
+      "fedora": {
+        "kernel": "7.1.8-200.fc44",
+        "systemd": "259.8-1.fc44",
+        "python3": "3.14.6-1.fc44",
+        "gcc": "16.1.1-2.fc44",
+        "glibc": "2.43-8.fc44",
+        "gnome-shell": "50.4-1.fc44",
+        "wayland": "N/A",
+        "bash": "5.3.9-3.fc44"
+      },
+      "opensuse-leap": {
+        "kernel": "6.12.0-160000.9.1",
+        "systemd": "257.7-160000.2.2",
+        "python3": "3.13.5-160000.2.2",
+        "gcc": "15-160000.2.2",
+        "glibc": "2.40-160000.6.1",
+        "gnome-shell": "48.4-160000.1.1",
+        "wayland": "N/A",
+        "bash": "5.2.37-160000.2.2"
+      },
+      "archlinux": {
+        "kernel": "7.1.8.arch1-3",
+        "systemd": "261.2-1",
+        "python3": "3.14.7-1",
+        "gcc": "16.2.1+r23+gd564253eb6c8-1",
+        "glibc": "2.44+r24+g16be1518495f-1",
+        "gnome-shell": "1:50.4-1",
+        "wayland": "1.26.0-1",
+        "bash": "5.3.15-1"
+      },
+      "ubuntu": {
+        "kernel": "7.0.0-29.29",
+        "systemd": "259.5-0ubuntu3.4",
         "python3": "3.14.3-0ubuntu2",
         "gcc": "4:15.2.0-5ubuntu1",
         "glibc": "2.43-2ubuntu2.3",
