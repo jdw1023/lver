@@ -1784,6 +1784,36 @@
         "removed": 0,
         "size_bytes": 0
       }
+    },
+    "2026-10-11": {
+      "fedora": {
+        "package_count": 69757,
+        "updated": 0,
+        "new": 0,
+        "removed": 0,
+        "size_bytes": 0
+      },
+      "archlinux": {
+        "package_count": 15336,
+        "updated": 0,
+        "new": 0,
+        "removed": 0,
+        "size_bytes": 0
+      },
+      "opensuse-leap": {
+        "package_count": 37447,
+        "updated": 0,
+        "new": 0,
+        "removed": 0,
+        "size_bytes": 0
+      },
+      "ubuntu": {
+        "package_count": 78922,
+        "updated": 0,
+        "new": 0,
+        "removed": 0,
+        "size_bytes": 0
+      }
     }
   },
   "versions": {
@@ -4292,6 +4322,48 @@
       },
       "ubuntu": {
         "kernel": "7.0.0-34.34",
+        "systemd": "259.5-0ubuntu3.4",
+        "python3": "3.14.3-0ubuntu2",
+        "gcc": "4:15.2.0-5ubuntu1",
+        "glibc": "2.43-2ubuntu2.4",
+        "gnome-shell": "50.1-0ubuntu1.3",
+        "wayland": "N/A",
+        "bash": "5.3-2ubuntu1"
+      }
+    },
+    "2026-10-11": {
+      "fedora": {
+        "kernel": "7.2.9-200.fc44",
+        "systemd": "259.9-1.fc44",
+        "python3": "3.14.8-1.fc44",
+        "gcc": "16.2.1-2.fc44",
+        "glibc": "2.43-9.fc44",
+        "gnome-shell": "50.5-1.fc44",
+        "wayland": "N/A",
+        "bash": "5.3.9-3.fc44"
+      },
+      "archlinux": {
+        "kernel": "7.2.9.arch1-1",
+        "systemd": "262-1",
+        "python3": "3.14.8-1",
+        "gcc": "16.2.1+r23+gd564253eb6c8-1",
+        "glibc": "2.44+r50+g1848099f063e-1",
+        "gnome-shell": "1:51.0-1",
+        "wayland": "1.26.0-1",
+        "bash": "5.3.20-1"
+      },
+      "opensuse-leap": {
+        "kernel": "6.12.0-160000.9.1",
+        "systemd": "257.7-160000.2.2",
+        "python3": "3.13.5-160000.2.2",
+        "gcc": "15-160000.2.2",
+        "glibc": "2.40-160000.7.1",
+        "gnome-shell": "48.4-160000.2.1",
+        "wayland": "N/A",
+        "bash": "5.2.37-160000.2.2"
+      },
+      "ubuntu": {
+        "kernel": "7.0.0-38.38",
         "systemd": "259.5-0ubuntu3.4",
         "python3": "3.14.3-0ubuntu2",
         "gcc": "4:15.2.0-5ubuntu1",
